@@ -1,12 +1,10 @@
 import"./Product.css"
-function Product({title,price, features, features2}){
+function Product({title,price, features}){
     return(
         <div className="Product">  
             <h3>{title}</h3>
             <h4> Price: {price}</h4>
-            <h5>Product description</h5>
-            <p>{features}</p>
-            <p>{features2}</p>
+            {price > 20000 && <p>Discout of 5%</p>}
         </div>
     )
 }
